@@ -5,8 +5,14 @@ on:
     branches: 
       - main
   pull_request: 
+<<<<<<< HEAD
     branches: 
       - main
+=======
+    types:
+      - opened
+
+>>>>>>> map-page-feature
 
 jobs:
     build-job:
