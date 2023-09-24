@@ -19,7 +19,7 @@ jobs:
         FULLNAME: "Somchai Cheingpongpan"
       steps:
         - run: echo ${{ vars.COMPANY_NAME }}
-        - run: echo "My host is  env.MY_HOST"
+        - run: echo "My host is  ${{ env.MY_HOST }}"
         - run: echo "Hello ${{ github.actor }} $FULLNAME"
 
     test-job:
