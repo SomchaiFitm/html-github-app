@@ -1,30 +1,27 @@
-name: Github Actions Demo
+name: GitHub Actions Demo
 
-on:
+on: 
   push:
-    branches: 
+    branches:
       - main
-  pull_request: 
-    types:
-      - opened
-
+  pull_request:
+    branches:
+      - main
 
 jobs:
     build-job:
       runs-on: ubuntu-latest
       steps:
-        - run: echo "build app"
-    
+        - run: echo "build job"
+
     test-job:
-      runs-on: ubuntu-lastest
+      runs-on: ubuntu-latest
       needs: build-job
       steps:
         - run: echo "test job"
-    
+
     deploy-job:
-      runs-on: ubuntu-lastest
+      runs-on: ubuntu-latest
       needs: test-job
       steps:
-        - run: echo "deploy job to server"
-
-        
+        - run: echo "deploy job to production server"
